@@ -6,7 +6,7 @@ export async function startCollection(req: Request, res: Response) {
     await startDataCollection();
     res.status(200).json({ message: 'Data collection started' });
   } catch (error) {
-    console.error('Error starting collection:', error);
+    console.error('Error starting collection: ', error);
     res.status(500).json({ error: 'Failed to start data collection' });
   }
 }
@@ -16,7 +16,7 @@ export function stopCollection(req: Request, res: Response) {
     stopDataCollection();
     res.status(200).json({ message: 'Data collection stopped' });
   } catch (error) {
-    console.error('Error stopping collection:', error);
+    console.error('Error stopping collection: ', error);
     res.status(500).json({ error: 'Failed to stop data collection' });
   }
 }
@@ -26,7 +26,7 @@ export function getCollectionStatus(req: Request, res: Response) {
     const status = getStatus();
     res.status(200).json(status);
   } catch (error) {
-    console.error('Error getting status:', error);
+    console.error('Error getting status: ', error);
     res.status(500).json({ error: 'Failed to get collection status' });
   }
 }
