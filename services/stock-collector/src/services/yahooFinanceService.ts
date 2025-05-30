@@ -33,7 +33,6 @@ export async function getStockQuotes(): Promise<StockQuote[]> {
         }
       })
     )
-
     return quotes.filter((quote): quote is StockQuote => quote !== null);
   } catch (error) {
     console.error('Error fetching stock data: ', error);

@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const FETCH_INTERVAL = parseInt(process.env.FETCH_INTERVAL || '60000');
+const FETCH_INTERVAL = parseInt(process.env.FETCH_INTERVAL || '300000');
 const KAFKA_TOPIC = process.env.KAFKA_TOPIC_STOCK_DATA || 'stock-data';
 
 let isRunning = false;
